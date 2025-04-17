@@ -1,3 +1,4 @@
+// src/components/layout/Header.js
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
@@ -8,24 +9,23 @@ function Header() {
 
   function handleLogout() {
     logout();
-    navigate('/login');
+    navigate('/');  // Navigate to landing page on logout
   }
 
   return (
     <header className="header">
       <div className="logo">
-        <Link to="/">Faculty Management Portal</Link>
+        <Link to={currentUser ? "/dashboard" : "/"}>Faculty Management Portal</Link>
       </div>
-
       {currentUser && (
         <nav className="nav-menu">
+          <Link to="/">Home</Link>
           <Link to="/dashboard">Dashboard</Link>
           <Link to="/faculty">Faculty</Link>
           <Link to="/roles">Roles</Link>
           <Link to="/responsibilities">Responsibilities</Link>
         </nav>
       )}
-
       <div className="user-actions">
         {currentUser ? (
           <>
@@ -46,4 +46,3 @@ function Header() {
 }
 
 export default Header;
-
