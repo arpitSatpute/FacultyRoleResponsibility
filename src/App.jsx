@@ -7,7 +7,7 @@ import FacultyList from './components/faculty/FacultyList.jsx';
 import FacultyDetail from './components/faculty/FacultyDetails.jsx';
 import RoleAssignment from './components/roles/RoleAssignment.jsx';
 import ResponsibilityManagement from './components/responsibilities/ResponsibilityManagement.jsx';
-import LandingPage from './Components/LandingPage.jsx';
+import LandingPage from './components/Home.jsx';
 import Header from './components/layouts/Header';
 import PrivateRoute from './components/auth/PrivateRoute';
 import { AuthProvider } from './contexts/AuthContext';

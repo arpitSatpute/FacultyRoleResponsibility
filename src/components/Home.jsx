@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function LandingPage() {
+function Home() {
   return (
     <div className="landing-container">
       <header className="landing-header">
@@ -179,4 +179,4 @@ function LandingPage() {
   );
 }
 
-export default LandingPage;
+export default Home;
